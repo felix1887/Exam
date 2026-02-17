@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aufgabe 2 – Klausur 2025</title>
+  <style>
+    /* Grundlayout der ganzen Seite */
+    body {
+      margin: 0;
+      padding: 32px 0;
+      background: #ffffff;
+      font-family: "Times New Roman", serif;
+    }
+
+    /* Äußerer Rahmen wie auf dem Aufgabenblatt */
+    .rahmen {
+      width: 560px;
+      margin: 0 auto;
+      border: 4px solid #222;
+      background: #fff;
+    }
+
+    /* Überschrift im oberen Bereich */
+    h1 {
+      text-align: center;
+      margin: 16px 0 14px;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    /* Drei Spalten mit Grid anordnen */
+    .inhalt {
+      display: grid;
+      grid-template-columns: 1fr 2.2fr 1fr;
+      min-height: 240px;
+      margin: 0 10px;
+    }
+
+    /* Allgemeine Formatierung für alle drei Spalten */
+    .links,
+    .mitte,
+    .rechts {
+      padding: 18px 10px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    /* Linke und rechte Spalte mit grauem Hintergrund */
+    .links,
+    .rechts {
+      background: #d8d8d8;
+    }
+
+    /* Rechte Spalte Text nach rechts ausrichten */
+    .rechts {
+      text-align: right;
+    }
+
+    /* Mittlere Spalte mit Hintergrundbild (wie gefordert).
+       Die Datei paper.gif wird im gleichen Ordner manuell ergänzt. */
+    .mitte {
+      background: #efefef url("paper.gif") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Zeile mit dem mittleren Satz */
+    .satz {
+      margin-left: 8px;
+    }
+
+    /* Buttons mit Flex untereinander ausrichten */
+    .button-spalte {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-left: 14px;
+      margin-top: 2px;
+    }
+
+    /* Einfache Button-Gestaltung */
+    button {
+      font-family: inherit;
+      font-size: 18px;
+      padding: 3px 14px;
+      border: 2px solid #555;
+      border-radius: 20px;
+      background: #e7e7e7;
+      cursor: pointer;
+    }
+
+    /* Bei Mausberührung Hintergrundfarbe ändern */
+    button:hover {
+      background: #bcd8ff;
+    }
+
+    /* Fußbereich unten */
+    .fuss {
+      text-align: center;
+      background: #d8d8d8;
+      font-size: 32px;
+      padding: 24px 8px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="rahmen">
+    <h1>Aufgabe 2</h1>
+
+    <div class="inhalt">
+      <div class="links">
+        Technologien des<br>
+        Internets ...
+      </div>
+
+      <div class="mitte">
+        <div class="satz">... ist das beste Fach ...</div>
+
+        <div class="button-spalte">
+          <button type="button">Button1</button>
+          <button type="button">Button2</button>
+          <button type="button">Button3</button>
+        </div>
+      </div>
+
+      <div class="rechts">
+        ... im ersten<br>
+        Semester!
+      </div>
+    </div>
+
+    <div class="fuss">Klausur im Wintersemester 2024</div>
+  </div>
+</body>
+</html>
