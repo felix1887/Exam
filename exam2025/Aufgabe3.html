@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Aufgabe 3</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 24px 32px;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0 0 16px;
+    }
+
+    #box {
+      width: 80px;
+      height: 80px;
+      background: #777;
+      margin-bottom: 14px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    label {
+      min-width: 250px;
+    }
+
+    output {
+      min-width: 40px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aufgabe 3</h1>
+
+  <div id="box"></div>
+
+  <div class="row">
+    <label for="widthRange">Breite in Pixel (Minimum 50, Maximum 150):</label>
+    <input id="widthRange" type="range" min="50" max="150" value="80">
+    <output id="widthOut">80 px</output>
+  </div>
+
+  <div class="row">
+    <label for="heightRange">Höhe in Pixel (Minimum 50, Maximum 150):</label>
+    <input id="heightRange" type="range" min="50" max="150" value="80">
+    <output id="heightOut">80 px</output>
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+    const widthRange = document.getElementById("widthRange");
+    const heightRange = document.getElementById("heightRange");
+    const widthOut = document.getElementById("widthOut");
+    const heightOut = document.getElementById("heightOut");
+
+    function updateBox() {
+      const w = widthRange.value;
+      const h = heightRange.value;
+      box.style.width = w + "px";
+      box.style.height = h + "px";
+      widthOut.textContent = w + " px";
+      heightOut.textContent = h + " px";
+    }
+
+    widthRange.addEventListener("input", updateBox);
+    heightRange.addEventListener("input", updateBox);
+    updateBox();
+  </script>
+</body>
+</html>
